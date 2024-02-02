@@ -1,8 +1,15 @@
 # remark-it
 
-markdown / html slideshow template, powered by remarkjs.
+## JG notes
 
-English | [简体中文](README.md)
+- adjust slide ratio https://github.com/gnab/remark/issues/86#issuecomment-36157045
+- remove shadow and make container bg same as slide bg: https://github.com/gnab/remark/issues/376#issuecomment-253972497
+
+
+# orig readme:
+
+
+---
 
 ## Demo
 
@@ -12,7 +19,19 @@ English | [简体中文](README.md)
 
 ## Why should you choose remark-it
 
-- **Support for direct use of SVG images.** When we need to insert flow chart or architecture diagram, use [visio](https://www.microsoft.com/zh-cn/microsoft-365/visio/flowchart-software/) or [drawio](https://github.com/jgraph/drawio) this kind of professional drawing software is more effective. Unfortunately, until 2020, PPT doesn't even support inserting SVG images. If we need to insert images produced by [visio](https://www.microsoft.com/zh-cn/microsoft-365/visio/flowchart-software/) or [drawio](https://github.com/jgraph/drawio), we need export `PNG` images first,  when inserting into PPT, a little carelessness will cause the picture to be blurred. In fact, both Visio and Drawio support saving drawings to editable `SVG` format, which not only supports lossless scaling, but also allows you to directly open the `SVG` document for editing when changes are needed.
+- **Support for direct use of SVG images.** When we need to insert flow chart
+  or architecture diagram, use
+  [visio](https://www.microsoft.com/zh-cn/microsoft-365/visio/flowchart-software/)
+  or [drawio](https://github.com/jgraph/drawio) this kind of professional
+  drawing software is more effective. Unfortunately, until 2020, PPT doesn't
+  even support inserting SVG images. If we need to insert images produced by
+  [visio](https://www.microsoft.com/zh-cn/microsoft-365/visio/flowchart-software/)
+  or [drawio](https://github.com/jgraph/drawio), we need export `PNG` images
+  first,  when inserting into PPT, a little carelessness will cause the picture
+  to be blurred. In fact, both Visio and Drawio support saving drawings to
+  editable `SVG` format, which not only supports lossless scaling, but also
+  allows you to directly open the `SVG` document for editing when changes are
+  needed.
 
 - **Beautiful and consistent typography.** Powerpoint text boxes are so hard to use! Getting the right line spacing, bullet points, and indentation takes a lot of time, and it's hard to keep the layout consistent throughout the whole presentation.
 

@@ -29,20 +29,64 @@
     <link rel="stylesheet" type="text/css" href="./css/filters.css" />
     <link rel="stylesheet" type="text/css" href="./fonts/remixicon.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+
+    <style>
+      .remark-slide-scaler {
+        box-shadow: none; /* remove slide frame */
+      }
+      .remark-slide-container {
+        background: var(--nord0); /* match slide container color with slides */
+      }
+
+      .sos-cover {
+        margin-left: 6rem;
+        text-align: middle;
+        vertical-align: middle;
+      }
+
+
+      .sos-cover-text {
+        padding-left: 12rem;
+      }
+
+      .sos-cover-text h1{
+        text-align: left;
+        padding-top: 2rem;
+        margin-bottom: 0;
+      }
+      .sos-cover-text p{
+        text-align: left;
+      }
+    </style>
   </head>
   <body>
     <textarea id="source">
 layout: true
-class: typo, typo-selection
+class: typo, typo-selection, nord-dark
 
 ---
 
 count: false
 class: center, middle
 
-# remark it
+.sos-cover[
+  .float-left.width-18.right[
+    ![sos-logo](https://media.github.ibm.com/user/24172/files/235cd680-b756-11ec-9dc3-229772b540eb)
+  ]
 
-A slideshow template powered by remarkjs
+  .sos-cover-text[
+    # A Very Interesting Thing
+    ... is about to be presented
+  ]
+
+]
+
+<!-- .abs-layout.bottom-7.font-xs[ -->
+<!-- --- -->
+<!-- Implementing headers and footers using absolute positioning is also very simple. If you want the header and footer to repeat on each page, just put them in a template page of type `layout: true`. Note that template pages can be multiple, each affecting only the slides that follow. -->
+<!-- ] -->
+
 
 ---
 
@@ -94,8 +138,8 @@ Use exclude: true to hide slides
 
 class: nord-dark, center, middle
 
+.float-left.width-23[![](https://media.github.ibm.com/user/24172/files/235cd680-b756-11ec-9dc3-229772b540eb)]
 # Dark Theme
-
 <small>.letter-spacing-20[As a chapter page feel cool]</small>
 
 ---
@@ -237,7 +281,6 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 ---
 
-background-image: url(static/bg.png)
 
 ## Image
 
@@ -1823,7 +1866,6 @@ The template is based on the following open source project：
     <script src="js/mermaid.min.js"></script>
     <script id="MathJax-script" async src="js/tex-mml-chtml.js"></script>
     <script>
-      // 预处理：去掉每行开头的空格，否则超过2层锁紧的类会导致解析出BUG
       var targetTextArea = document.getElementById("source");
       var targetText = targetTextArea.innerHTML.replace(
         /```[^`]+```/gm,
@@ -1839,6 +1881,7 @@ The template is based on the following open source project：
         .join("\n");
 
       var slideshow = remark.create({
+        //ratio: "16:9", // window ratio
         ratio: "4:3", // window ratio
         // arta, ascetic, dark, default, far, github, googlecode, idea,
         // ir-black, magula, monokai, rainbow, solarized-dark, solarized-light,
@@ -1892,7 +1935,7 @@ The template is based on the following open source project：
         }
       });
 
-      // 初始化 mermaid
+      // mermaid
       mermaid.mermaidAPI.initialize({
         startOnLoad: false,
         theme: "forest",
